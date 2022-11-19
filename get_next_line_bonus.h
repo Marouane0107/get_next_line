@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maouzal <maouzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 05:11:32 by maouzal           #+#    #+#             */
-/*   Updated: 2022/11/08 18:04:44 by maouzal          ###   ########.fr       */
+/*   Created: 2022/11/18 15:48:59 by maouzal           #+#    #+#             */
+/*   Updated: 2022/11/19 15:40:38 by maouzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
+#ifndef GET_NEXT_LINE_BONUS_H
 
-# define FT_PRINTF_H
-# include <stdarg.h>
+# define GET_NEXT_LINE_BONUS_H
+# include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4
+# endif
 
-int	ft_putstr(char *s);
-int	ft_putchar(char c);
-int	ft_putnbr(int n);
-int	ft_printf(const char *p, ...);
-int	ft_putnbr_uns(unsigned int n);
-int	ft_hexa(unsigned long nb, int base);
-int	ft_pointer_hx(unsigned long nb);
+unsigned int	ft_strlen(const char *s);
+char			*ft_strdup(const char *s);
+char			*ft_strjoin(char *s1, char *s2);
+int				chr(char *s);
+char			*read_line(int fd, char *str);
+char			*end_line(char *str);
+char			*rest_val(char *str);
+char			*get_next_line(int fd);
 
 #endif
