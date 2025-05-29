@@ -207,4 +207,4 @@ The function must gracefully handle:
 
 *Developed as part of the 42 School "get_next_line" project.*
 
-*Last Updated: 2025-05-29*
+*Last Updated: 2022*
